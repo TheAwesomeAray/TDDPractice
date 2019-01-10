@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.168
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pluralsight.TDDPlayByPlay.Domain", "Pluralsight.TDDPlayByPlay.Domain\Pluralsight.TDDPlayByPlay.Domain.csproj", "{A76753A1-C843-4614-B2B9-CC80B67B2D64}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pluralsight.TDDPlaytByPlay.Tests", "Pluralsight.TDDPlaytByPlay.Tests\Pluralsight.TDDPlaytByPlay.Tests.csproj", "{A1CC9630-6734-49D7-8201-EC4D17DC7D3C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A76753A1-C843-4614-B2B9-CC80B67B2D64}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A76753A1-C843-4614-B2B9-CC80B67B2D64}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A76753A1-C843-4614-B2B9-CC80B67B2D64}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A76753A1-C843-4614-B2B9-CC80B67B2D64}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A1CC9630-6734-49D7-8201-EC4D17DC7D3C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1CC9630-6734-49D7-8201-EC4D17DC7D3C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1CC9630-6734-49D7-8201-EC4D17DC7D3C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1CC9630-6734-49D7-8201-EC4D17DC7D3C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AE48ABDA-966F-4EAF-BD18-5A2AE05B8C1F}
+	EndGlobalSection
+EndGlobal
