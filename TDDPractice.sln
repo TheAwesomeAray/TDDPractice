@@ -5,11 +5,9 @@ VisualStudioVersion = 15.0.28307.168
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pluralsight.TDDPlaytByPlay.Tests", "Pluralsight.TDDPlaytByPlay.Tests\Pluralsight.TDDPlaytByPlay.Tests.csproj", "{A1CC9630-6734-49D7-8201-EC4D17DC7D3C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pluralsight.OutsideInTDD", "Pluralsight.OutsideInTDD\Pluralsight.OutsideInTDD.csproj", "{B7237337-B63B-45FE-BAB0-343858113966}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pluralsight.OutsideInTDD", "Pluralsight.OutsideInTDD\Pluralsight.OutsideInTDD.csproj", "{B7237337-B63B-45FE-BAB0-343858113966}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Testing", "Testing\Testing.csproj", "{B6E56A4C-AD5C-40D8-897A-48EE31ED7BFB}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pluralsight.OutsideInTDD.NetFramework", "Pluralsight.OutsideInTDD.NetFramework\Pluralsight.OutsideInTDD.NetFramework.csproj", "{1F95F8A0-7DDD-4C4C-8113-BEA0097BB963}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pluralsight.OutsideInTDD.WebAPI", "Pluralsight.OutsideInTDD.WebAPI\Pluralsight.OutsideInTDD.WebAPI.csproj", "{2BC380AA-69E5-4B06-AFD3-2690E6EDDF03}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,14 +23,10 @@ Global
 		{B7237337-B63B-45FE-BAB0-343858113966}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B7237337-B63B-45FE-BAB0-343858113966}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B7237337-B63B-45FE-BAB0-343858113966}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B6E56A4C-AD5C-40D8-897A-48EE31ED7BFB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B6E56A4C-AD5C-40D8-897A-48EE31ED7BFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B6E56A4C-AD5C-40D8-897A-48EE31ED7BFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B6E56A4C-AD5C-40D8-897A-48EE31ED7BFB}.Release|Any CPU.Build.0 = Release|Any CPU
-		{1F95F8A0-7DDD-4C4C-8113-BEA0097BB963}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1F95F8A0-7DDD-4C4C-8113-BEA0097BB963}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1F95F8A0-7DDD-4C4C-8113-BEA0097BB963}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1F95F8A0-7DDD-4C4C-8113-BEA0097BB963}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2BC380AA-69E5-4B06-AFD3-2690E6EDDF03}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2BC380AA-69E5-4B06-AFD3-2690E6EDDF03}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2BC380AA-69E5-4B06-AFD3-2690E6EDDF03}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2BC380AA-69E5-4B06-AFD3-2690E6EDDF03}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
