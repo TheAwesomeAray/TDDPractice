@@ -1,5 +1,4 @@
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Configuration;
 using Pluralsight.OutsideInTDD.WebAPI.Controllers;
 using Pluralsight.OutsideInTDD.WebAPI.Domain;
 using System;
@@ -8,8 +7,10 @@ using Xunit;
 namespace Pluralsight.OutsideInTDD
 {
     public class JournalControllerTests
-    {
+    { 
+
         [Fact]
+        [UseDatabase]
         public void GettingJournalEntriesReturnsAnArrayOfJournalEntries()
         {
             var controller = new JournalController();
@@ -20,6 +21,7 @@ namespace Pluralsight.OutsideInTDD
         }
 
         [Fact]
+        [UseDatabase]
         public void PostingAJournalEntryCreatesAJournalEntry()
         {
             var controller = new JournalController();
@@ -38,6 +40,7 @@ namespace Pluralsight.OutsideInTDD
         }
 
         [Fact]
+        [UseDatabase]
         public void GettingJournalEntriesAfterPostingReturnsPostedJournalEntry()
         {
             var controller = new JournalController();
