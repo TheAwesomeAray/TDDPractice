@@ -21,3 +21,8 @@ CREATE TABLE [dbo].[JournalEntry](
 	[Duration] [time] NOT NULL
 )
 GO
+
+INSERT INTO [dbo].[User] VALUES ('Andrew')
+
+INSERT INTO [dbo].JournalEntry (UserId, Duration, Distance, Time)
+VALUES (1, '00:24:00.000', 5000, '2019-01-11T07:15:50.0000000-06:00')

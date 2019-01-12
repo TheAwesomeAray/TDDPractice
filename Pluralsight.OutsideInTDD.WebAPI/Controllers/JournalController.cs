@@ -1,24 +1,20 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
+using Pluralsight.OutsideInTDD.WebAPI.Data;
 using Pluralsight.OutsideInTDD.WebAPI.Domain;
-using System.Collections.Generic;
 
 namespace Pluralsight.OutsideInTDD.WebAPI.Controllers
 {
-    public class JournalController : Controller
+    public class JournalController : ControllerBase
     {
-        private readonly static List<JournalEntry> entries = new List<JournalEntry>();
-        
         [HttpGet]
         public JournalEntry[] Get()
         {
-            return entries.ToArray();
+            return new Repository().GetForUser("foo");
         }
 
         [HttpPost]
         public JournalEntry Post(JournalEntry journalEntry)
         {
-            entries.Add(journalEntry);
             return journalEntry;
         }
     }

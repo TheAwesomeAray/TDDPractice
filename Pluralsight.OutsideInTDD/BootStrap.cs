@@ -6,7 +6,7 @@ namespace Pluralsight.OutsideInTDD
 {
     internal class BootStrap
     {
-        private static string connString = @"Data Source=.\SQLEXPRESS;Initial Catalog=RunningJournal;Integrated Security=True;Pooling=false";
+        public static string connString = @"Data Source=.\SQLEXPRESS;Initial Catalog=RunningJournal;Integrated Security=True;Pooling=false";
 
         internal void InstallDatabase()
         {
