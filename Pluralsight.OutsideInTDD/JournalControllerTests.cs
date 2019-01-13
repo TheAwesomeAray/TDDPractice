@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.TestHost;
 using Microsoft.Extensions.Configuration;
 using Pluralsight.OutsideInTDD.WebAPI;
 using Pluralsight.OutsideInTDD.WebAPI.Controllers;
@@ -28,7 +29,7 @@ namespace Pluralsight.OutsideInTDD
         public void PostingAJournalEntryCreatesAJournalEntry()
         {
             var controller = new JournalController();
-            //var server = new TestServer(new WebHostBuilder().UseStartup<Startup>)
+            var server = new TestServer(new WebHostBuilder().UseStartup<Startup>());
             var expected = new JournalEntry
             {
                 Time = DateTimeOffset.Now,
