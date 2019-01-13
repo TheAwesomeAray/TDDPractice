@@ -3,7 +3,7 @@ using Xunit;
 
 namespace Pluralsight.MockingWithMoq
 {
-    public class MockTests
+    public class HandRolledMockTests
     {
 
         [Fact]
