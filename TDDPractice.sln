@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pluralsight.OutsideInTDD", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pluralsight.OutsideInTDD.WebAPI", "Pluralsight.OutsideInTDD.WebAPI\Pluralsight.OutsideInTDD.WebAPI.csproj", "{2BC380AA-69E5-4B06-AFD3-2690E6EDDF03}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pluralsight.MockingWithMoq", "Pluralsight.MockingWithMoq\Pluralsight.MockingWithMoq.csproj", "{E7E0FDD2-32AA-4039-809C-1B29A0EA4BBF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pluralsight.MockingWithMoq", "Pluralsight.MockingWithMoq\Pluralsight.MockingWithMoq.csproj", "{E7E0FDD2-32AA-4039-809C-1B29A0EA4BBF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pluralsight.MaintainableUnitTests", "Pluralsight.MaintainableUnitTests\Pluralsight.MaintainableUnitTests.csproj", "{A7CA587B-11EF-406F-94A8-3DFC41529599}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{E7E0FDD2-32AA-4039-809C-1B29A0EA4BBF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E7E0FDD2-32AA-4039-809C-1B29A0EA4BBF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E7E0FDD2-32AA-4039-809C-1B29A0EA4BBF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A7CA587B-11EF-406F-94A8-3DFC41529599}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A7CA587B-11EF-406F-94A8-3DFC41529599}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A7CA587B-11EF-406F-94A8-3DFC41529599}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A7CA587B-11EF-406F-94A8-3DFC41529599}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
