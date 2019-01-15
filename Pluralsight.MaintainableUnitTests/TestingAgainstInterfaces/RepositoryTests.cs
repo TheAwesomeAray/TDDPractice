@@ -92,6 +92,26 @@ public abstract class RepositoryTests<T>
     [InlineData(17, 0)]
     [InlineData(17, 3)]
     [InlineData(17, 16)]
+    public void GetAll_RemovedOneObjectAndSaved_NewRepoDoesNotReturnThatObject(int storageCount, int indexToRemove)
+    {
+        T[] data = SampleData.Take(storageCount).ToArray();
+        InitializeStorage(data);
+        int idToRemove = indexToRemove + 1;
+        IRepository<T> repo = CreateSut();
+        T objToRemove = repo.Find(idToRemove);
+        repo.Remove(objToRemove);
+        repo.Save();
+
+        IRepository<T> newRepo = CreateSut();
+        IEnumerable<T> actualObj = newRepo.GetAll().Where(x => MemberwiseEqual(x, objToRemove));
+
+        Assert.False(actualObj.Any());
+    }
+
+    [Theory]
+    [InlineData(17, 0)]
+    [InlineData(17, 3)]
+    [InlineData(17, 16)]
     public void GetAll_RemovedOneObject_DoesNotReturnThatObject(int storageCount, int indexToRemove)
     {
         T[] data = SampleData.Take(storageCount).ToArray();
@@ -240,6 +260,26 @@ public abstract class RepositoryTests<T>
         repo.Save();
 
         Assert.True(GetId(newObj) > 0);
+    }
+
+    [Theory]
+    [InlineData(0)]
+    [InlineData(1)]
+    [InlineData(17)]
+    public void Remove_AddThenRemove_GetALlDoesNotContainAddedObject(int initialCount)
+    {
+        IEnumerable<T> data = SampleData.Take(initialCount + 1).ToList();
+        InitializeStorage(data.Take(initialCount));
+        T newObj = data.ElementAt(initialCount);
+
+        IRepository<T> repo = CreateSut();
+        repo.Add(newObj);
+        repo.Remove(newObj);
+
+        IEnumerable<T> actualObject = 
+            repo.GetAll().Where(obj => ReferenceEquals(obj, newObj));
+
+        Assert.False(actualObject.Any());
     }
 
     protected abstract bool MemberwiseEqual(T a, T b);
