@@ -30,6 +30,14 @@ namespace Pluralsight.MaintainableUnitTests
             toArray.AppendMany(points);
         }
 
+        public int GetGoldenTarget(IMyList targetPoints)
+        { 
+            if (targetPoints.Count < 2)
+                throw new ArgumentException("points.Count < 2", nameof(targetPoints));
+
+            return (targetPoints.GetFirst() + targetPoints.ElementAt(targetPoints.Count - 1)) / 2;
+        }
+
         private int CalculateScalingFactor()
         {
             if (IsSummerSeason())

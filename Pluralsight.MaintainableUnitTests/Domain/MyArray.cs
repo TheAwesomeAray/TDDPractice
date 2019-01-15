@@ -6,6 +6,9 @@ namespace Pluralsight.MaintainableUnitTests
     {
         private int[] Data { get; set; }
         public int Length => Data.Length;
+
+        public int Count => Data.Length;
+
         public MyArray(int size = 0)
         {
             Data = new int[size];
@@ -32,5 +35,10 @@ namespace Pluralsight.MaintainableUnitTests
         }
 
         public int ElementAt(int index) => Data[index];
+
+        public int GetFirst()
+        {
+            return Data[0];
+        }
     }
 }

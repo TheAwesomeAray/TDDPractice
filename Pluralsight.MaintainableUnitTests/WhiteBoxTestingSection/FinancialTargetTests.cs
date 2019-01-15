@@ -90,5 +90,43 @@ public class FinancialTargetTests
 
             Assert.True(sequenceCorrect);
         }
+
+        [Theory]
+        [InlineData(new int[] { })]
+        [InlineData(new[] { 1 })]
+        public void GetGoldenTarget_ReceivesLessThanTwoPoints_Throws(int[] points)
+        {
+            var list = new MyArray();
+            foreach (var point in points)
+                list.Append(point);
+
+            var timeServer = new Mock<ITimeServer>().Object;
+            var financialTarget = new FinancialTarget(timeServer);
+
+            Assert.Throws<Exception>(() => financialTarget.GetGoldenTarget(list));
+        }
+
+        [Theory]
+        [InlineData(new[] { 1, 2, }, 1)]
+        //Odd number of elements, ending in even value
+        [InlineData(new[] { 2, 4, 1, 7, 8 }, 5)]
+        //Even number of elements, ending in odd value
+        [InlineData(new[] { 2, 1, 3, 9, 16, 7 }, 4)]
+        //[InlineData(new int[] { }, 0)]  //This test case will never pass. The expectation is wrong.
+        public void GetGoldenTarget_ReceivesAtLeastTwoTargetPoints_ReturnsExpectedTarget(
+            int[] points, int expectedTarget)
+        {
+            //You don't have to mock everything. Sometimes mocking is more trouble than it is worth
+            var list = new MyArray();
+            foreach (var point in points)
+                list.Append(point);
+
+            var timeServer = new Mock<ITimeServer>().Object;
+            var financialTarget = new FinancialTarget(timeServer);
+
+            int targetPoint = financialTarget.GetGoldenTarget(list);
+
+            Assert.Equal(expectedTarget, targetPoint);
+        }
     }
 }
