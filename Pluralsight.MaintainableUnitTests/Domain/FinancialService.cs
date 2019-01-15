@@ -11,6 +11,11 @@ namespace Pluralsight.MaintainableUnitTests
             TargetsRepository = targetsRepository;
         }
 
+        public FinancialService()
+        {
+                
+        }
+
         public void GenerateData()
         {
             //use this.TargetsRepository
@@ -24,14 +29,23 @@ namespace Pluralsight.MaintainableUnitTests
             
         }
 
+        //Will test the disposable pattern with this method
         public void GenerateData(Func<IRepository<FinancialTarget>> repoFactory)
         {
             //In full control of scope, can be long or short
             using (IRepository<FinancialTarget> repo = repoFactory())
             {
+                AddMore(repo);
                 repo.Add(new FinancialTarget(new SystemTime()));
+                
                 repo.Save();
+                repo.Dispose();
             }
+        }
+
+        private void AddMore(IRepository<FinancialTarget> repo)
+        {
+            
         }
     }
 }
