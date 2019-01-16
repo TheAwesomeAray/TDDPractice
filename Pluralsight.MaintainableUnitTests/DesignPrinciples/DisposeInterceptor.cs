@@ -6,7 +6,6 @@ public class DisposeInterceptor : IInterceptor
 
     public void Intercept(IInvocation invocation)
     {
-
         if (invocation.Method.Name == "Dispose")
         {
             IsDisposed = true;

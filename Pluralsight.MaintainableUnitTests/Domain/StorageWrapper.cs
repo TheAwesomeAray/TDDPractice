@@ -22,8 +22,10 @@ namespace Pluralsight.MaintainableUnitTests
         }
 
         public void Add(T obj) => NewObjects.Add(obj);
-        
-        public void Dispose() => throw new NotImplementedException();
+
+        public bool IsDisposed { get; private set; }
+
+        public void Dispose() { IsDisposed = true; }
         
         public void Remove(T obj)
         {

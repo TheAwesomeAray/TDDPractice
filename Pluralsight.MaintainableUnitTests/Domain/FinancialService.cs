@@ -37,9 +37,9 @@ namespace Pluralsight.MaintainableUnitTests
             {
                 AddMore(repo);
                 repo.Add(new FinancialTarget(new SystemTime()));
-                
-                repo.Save();
                 repo.Dispose();
+                repo.Save();
+                
             }
         }
 
